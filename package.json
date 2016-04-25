@@ -1,0 +1,27 @@
+{
+  "name": "graphing",
+  "version": "0.1.0",
+  "description": "A graphing library for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacegeek224/graphing.git"
+  },
+  "keywords": [
+    "graph",
+    "canvas",
+    "graphing",
+    "image",
+    "math",
+    "geometry"
+  ],
+  "author": "spacegeek224",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spacegeek224/graphing/issues"
+  },
+  "homepage": "https://github.com/spacegeek224/graphing#readme"
+}
