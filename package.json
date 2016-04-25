@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/spacegeek224/graphing/issues"
   },
-  "homepage": "https://github.com/spacegeek224/graphing#readme"
+  "homepage": "https://github.com/spacegeek224/graphing#readme",
+  "dependencies": {
+    "canvas": "^1.3.12"
+  }
 }
