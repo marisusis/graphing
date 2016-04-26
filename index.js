@@ -26,7 +26,7 @@ function Graph(color, width, height, minx, maxx) {
 
 Graph.prototype.addFunction = function(s) {
   var plot = {};
-  plot.f = math.eval(s);
+  plot.f = math.eval('f(x)='+s);
   plot.coords = [];
   for(var x = this.minx*10; x < this.maxx*10; x++) {
     plot.coords.push([x / 10, plot.f(x / 10)]);
