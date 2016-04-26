@@ -1,6 +1,6 @@
 {
   "name": "graphing",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A graphing library for nodejs",
   "main": "index.js",
   "scripts": {
@@ -30,5 +30,6 @@
   },
   "devDependencies": {
     "express": "^4.13.4"
-  }
+  },
+  "tonicExampleFilename": "example.js"
 }
