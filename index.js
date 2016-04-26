@@ -29,7 +29,7 @@ Graph.prototype.addFunction = function(s) {
   plot.f = math.eval('f(x)='+s);
   plot.coords = [];
   for(var x = this.minx*10; x < this.maxx*10; x++) {
-    plot.coords.push([x / 10, plot.f(x / 10)]);
+    plot.coords.push([x/10, plot.f(x/10)]);
   }
   this.plots.push(plot);
 }
@@ -46,9 +46,9 @@ Graph.prototype.drawPoint = function(n) {
   this.ctx.fillRect(c[0]-5, c[1]-5, 10, 10);
 }
 
-Graph.prototype.drawFunction = function(n) {
+Graph.prototype.drawFunction = function(n,color) {
   this.ctx.lineWidth = 3;
-  this.ctx.strokeStyle = this.color;
+  this.ctx.strokeStyle = color;
   var coords = this.plots[n].coords;
   this.ctx.beginPath();
   this.ctx.lineTo(this.XC(coords[0][0]), this.YC(coords[0][1]));

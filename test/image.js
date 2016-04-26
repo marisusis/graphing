@@ -17,19 +17,28 @@ app.get('/-/*', function(req, res) {
 
 app.get('/image/view', function(req, res) {
   var graph = new graphing.Graph('blue',800,800,-10,10);
-  graph.addFunction('f(x) = '+req.query.f);
- graph.addPoint(req.query.p);
+  graph.addFunction(req.query.fa);
+  graph.addFunction(req.query.fb);
+//  graph.addPoint(req.query.p);
   graph.graphLines();
-  graph.drawFunction(0);
-  graph.drawPoint(0);
+  graph.drawFunction(0,'red');
+  graph.drawFunction(1,'blue');
+//   graph.drawPoint(0);
   res.send('<img src="' + graph.getGraph() + '" />');
 });
 
 app.get('/image/dl', function(req, res) {
-  var graph = new graphing.Graph('blue',400,400,-10,10);
-  graph.addFunction('f(x) = '+req.query.f);
-  graph.graphLines('black')
-  res.send(bd(graph.drawFunction(0)));
+  var graph = new graphing.Graph('blue',800,800,-10,10);
+  graph.addFunction(req.query.fa);
+  graph.addFunction(req.query.fb);
+ graph.addPoint(req.query.p);
+  graph.graphLines();
+  graph.drawFunction(0);
+  graph.drawFunction(1);
+  graph.drawPoint(0);
+  var buffer = bd(graph.getGraph());
+  var stream = new BufferStream(buffer);
+  stream.pipe(res);
 // var stream = 
 //   stream.pipe(res);
 });
